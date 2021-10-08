@@ -6,10 +6,26 @@ POST http://localhost:8080/tasks
 Content-Type: application/json
 
 {
-  "project_name": "sdsasad",
+  "project_name": "Test Project",
   "task_list": [
     {
-      "text": "sadsadsd",
+      "text": "Test Task",
+      "completed": false
+    },
+    {
+      "text": "Test Task 1",
+      "completed": false
+    },
+    {
+      "text": "Test Task 2",
+      "completed": false
+    },
+    {
+      "text": "Test Task 3",
+      "completed": false
+    },
+    {
+      "text": "Test Task 4",
       "completed": false
     }
   ]

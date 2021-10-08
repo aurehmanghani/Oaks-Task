@@ -39,7 +39,7 @@ const AddNewProject = () => {
         },
         body: JSON.stringify(formData),
       };
-      const response = await fetch("http://localhost:8080/tasks", config);
+      const response = await fetch("http://localhost:8080/api/tasks", config);
       const json = await response.json();
 
       if (response.ok) {
@@ -133,7 +133,7 @@ const AddNewProject = () => {
               <Button
                 type="dashed"
                 onClick={() => add()}
-                style={{ width: "100%" }}
+                style={{ width: "100%",marginLeft:"70px" }}
                 icon={<PlusOutlined />}
               >
                 Add field

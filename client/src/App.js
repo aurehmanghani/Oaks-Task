@@ -41,7 +41,7 @@ function App(props) {
             </Content>
 
             <Footer style={{ textAlign: "center" }}>
-              Ant Design ©2018 Created by Ant UED
+             @2021
             </Footer>
           </Layout>
         </Layout>

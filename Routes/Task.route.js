@@ -15,10 +15,5 @@ router.get('/:id', TaskController.findTaskById);
 //Get a task by Sub id
 router.get('/updateStatus/:id/:checked', TaskController.findTaskBySubId);
 
-//Update a task by id
-router.patch('/:id', TaskController.updateATask);
-
-//Delete a task by id
-router.delete('/:id', TaskController.deleteATask);
 
 module.exports = router;

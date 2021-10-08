@@ -35,7 +35,7 @@ function ListAllTasks(props) {
 
   return (
     <div className="App">
-      <Button type="link" style={{float: 'right'}} href=""> + Add Project</Button>
+      <Button type="link" style={{float: 'right'}} href=""><Link to="/addNewProject">+ Add New Project</Link></Button>
 
       <Table dataSource={dataSource} columns={columns}   rowKey="_id"/>;
 

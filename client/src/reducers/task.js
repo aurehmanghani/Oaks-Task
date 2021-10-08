@@ -8,7 +8,7 @@ const taskReducer = (state = {}, { type, payload }) => {
       return {...state, task : payload};
     case COMPLETE_TASK:
       let index = state.tasks.findIndex(task => task._id === payload._id);
-      //console.log(index);
+      console.log(index);
       let tasks = [...state.tasks];
       //tasks[index] = {...tasks[index], completed: type.completed};
       return {...state, tasks}

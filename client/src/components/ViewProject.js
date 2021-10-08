@@ -12,10 +12,10 @@ const ViewProject = (props) => {
   function onChange(e) {
     let checked = e.target.checked;
     //console.log(checked)
-    fetch("http://localhost:8080/tasks/updateStatus/"+e.target.value+"/"+checked)
+    fetch("http://localhost:8080/api/tasks/updateStatus/"+e.target.value+"/"+checked)
     .then((res) => res.json())
     .then((res) => {
-      dispatch({ type: COMPLETE_TASK, payload: res })
+      //dispatch({ type: COMPLETE_TASK, payload: res })
     });
     //console.log(`checked = ${e.target.value}`);
   }

@@ -13,22 +13,22 @@ app.use(cors());
 
 
 const TaskRoute = require('./Routes/Task.route');
-app.use('/tasks', TaskRoute);
+app.use('/api/tasks', TaskRoute);
 
 
-// app.use((req, res, next) => {
-//   next(createError(404, 'Not found'));
-// });
+app.use((req, res, next) => {
+  next(createError(404, 'Not found'));
+});
 
-// app.use((err, req, res, next) => {
-//   res.status(err.status || 500);
-//   res.send({
-//     error: {
-//       status: err.status || 500,
-//       message: err.message
-//     }
-//   });
-// });
+app.use((err, req, res, next) => {
+  res.status(err.status || 500);
+  res.send({
+    error: {
+      status: err.status || 500,
+      message: err.message
+    }
+  });
+});
 
 
 const port = process.env.PORT || 5000;

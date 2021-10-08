@@ -27,24 +27,6 @@ module.exports = {
       }
       next(error);
     }
-
-    /*Or:
-  If you want to use the Promise based approach*/
-    /*
-  const Task = new Task({
-    name: req.body.name,
-    price: req.body.price
-  });
-  Task
-    .save()
-    .then(result => {
-      console.log(result);
-      res.send(result);
-    })
-    .catch(err => {
-      console.log(err.message);
-    }); 
-    */
   },
 
   findTaskById: async (req, res, next) => {
@@ -98,43 +80,5 @@ module.exports = {
 
   
 
-  updateATask: async (req, res, next) => {
-    try {
-      const id = req.params.id;
-      const updates = req.body;
-      const options = { new: true };
-
-      const result = await Task.findByIdAndUpdate(id, updates, options);
-      if (!result) {
-        throw createError(404, 'Task does not exist');
-      }
-      res.send(result);
-    } catch (error) {
-      console.log(error.message);
-      if (error instanceof mongoose.CastError) {
-        return next(createError(400, 'Invalid Task Id'));
-      }
-
-      next(error);
-    }
-  },
-
-  deleteATask: async (req, res, next) => {
-    const id = req.params.id;
-    try {
-      const result = await Task.findByIdAndDelete(id);
-      // console.log(result);
-      if (!result) {
-        throw createError(404, 'Task does not exist.');
-      }
-      res.send(result);
-    } catch (error) {
-      console.log(error.message);
-      if (error instanceof mongoose.CastError) {
-        next(createError(400, 'Invalid Task id'));
-        return;
-      }
-      next(error);
-    }
-  }
+  
 };
