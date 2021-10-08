@@ -1,0 +1,70 @@
+###Get a list of all Tasks
+GET http://localhost:8080/tasks
+
+### Create a Task
+POST http://localhost:8080/tasks
+Content-Type: application/json
+
+{
+  "project_name": "sdsasad",
+  "task_list": [
+    {
+      "text": "sadsadsd",
+      "completed": false
+    }
+  ]
+}
+
+### GET a task by id
+GET http://localhost:8080/tasks/615dac39948b80b2843d444f
+
+### Update a task by id
+PATCH  http://localhost:8080/tasks/5df118b3c86e5826958b661a
+Content-Type: application/json
+
+{
+  "price": 5999
+}
+
+
+### Delete a task by id
+DELETE  http://localhost:8080/tasks/5df118b3c86e5826958b661a
+
+### 404 route Not Found
+GET http://localhost:8080/abc_xyz
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#hrXWgw4Q127uqZJ3
